@@ -1,0 +1,11 @@
+# Railway service definition
+[build]
+builder = "Docker"
+
+[deploy]
+restartPolicyType = "onFailure"
+restartPolicyMaxRetries = 3
+
+[service]
+# Railway injects PORT automatically for web services
+# If your app uses a Telegram bot webhook, set the URL in variables after deploy.
